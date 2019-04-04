@@ -46,6 +46,8 @@
 - สั่ง `yarn build-json` เพื่อประมวลผลข้อมูล และสร้างเป็นไฟล์ JSON
 - สั่ง `yarn dev` เพื่อเปิดเซิฟเวอร์สำหรับพัฒนาเว็บไซต์ โดยสามารถดูเว็บไซต์ได้ที่ http://localhost:8080
 
+## API ##
+[Link to API Documents](docs/API.md)
 
 ## Contributing
 

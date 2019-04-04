@@ -22,17 +22,17 @@ curl https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json
 
 |ตัวแปร|รายละเอียด|ชนิดข้อมูล|Require|
 |---|---|---|--:|
-|id|ไอดีของงานอีเว้นท์|String|Require|
+|id|ไอดีของงานอีเว้นท์|String ตัวเล็ก ตัวเลข -|Require|
 |title|หัวข้อของงานอีเวนท์|String|Require|
-|summary|สรุปสาระสำคัญของงานอีเว้นท์|String|Require|
+|summary|สรุปสาระสำคัญของงานอีเว้นท์|String น้อยกว่า 250 ตัว|Require|
 |description|รายละเอียดของงานอีเว้น|String|Require|
 |start|วันที่เริ่มงานอีเว้นท์|[Date Object](#object-date)|Require|
 |end|วันที่สิ้นสุดงานอีเว้นท์|[Date Object](#object-date)|Require|
 |time|เวลาการจัดงานอีเว้นท์|_Array_\<[Time Object](#object-time)>||
 |location|สถานที่จัดงานอีเว้นท์|[Location Object](#object-location)||
 |categories|ประเภทของอีเว้นท์|_Array_\<String>|Require|
-|topics|หัวข้อที่เกี่ยวข้องกับงานอีเว้นท์|_Array_\<String>||
-|links|ลิงค์สำหรับงานอีเว้นท์|_Array_\<[Link Object](#object-link)>||
+|topics|หัวข้อที่เกี่ยวข้องกับงานอีเว้นท์|_Array_\<String>|Require|
+|links|ลิงค์สำหรับงานอีเว้นท์|_Array_\<[Link Object](#object-link)>|Require|
 |resources|แหล่งที่มาของงานอีเว้นท์|_Array_\<[Resource Object](#object-resource)>||
 |communityResources|ลิงค์กลุ่มของงานอีเว้นท์|_Array_\<[Resource Object](#object-resource)>||
 |declared|อ้างอิงแหล่งเข้าถึงข้อมูล|[Declared Object](#object-declared)||

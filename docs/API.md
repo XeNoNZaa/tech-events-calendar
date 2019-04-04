@@ -88,61 +88,20 @@ Array of Events
 
 ```javascript
 [
-  {// Event Detail
-    
-    // Require
-    // Event ID
+  {    
     "id" : `EVENT_2019_ID`,
-    
-    // Require
-    // Event title
     "title" : `EVENT_2019_ID`,
-    
-    // Require
-    // Event summary
     "summary" : `Summary detail`,
-    
-    // Require
-    // Event description
     "description" : `Description`,
-    
-    // Require
-    // Object of Start Date contain Year, month, date
     "start" : {year, month, date},
-    
-    // Require
-    // Object of End Date contain Year, month, date
-    "end" : {year, month, date},
-    
-    // Array of time to present any thing    
+    "end" : {year, month, date},  
     "time" : [{from: {hour, minute}}, {to: {hour, minute}}, after, agendar],
-    
-    // Require location.title
-    // Object location of this event
     "location": {title, url, detail},
-    
-    // Require 1 items
-    // Array of catagories
     "categories" : [],
-    
-    // Array of topic in this Event
     "topics" : [],
-    
-    // Links Require 1
-    // Object Link Require title, type, url
-    // Array of Object link
-    // type : website, rsvp, ticket
-    // price : require when type ticket
     "links" : [{title, detail, type, url, price}],
-    
-    // Object resource require title, type, url
-    // Array of resource in this event
     "resources" : [{title, type, url}]
-    
-    // Array of resource ???
     "communityResources" : [{title, type, url}]
-    
-    // DECLARED ???
     "declared" : {filename, line, column}
   }
 ]

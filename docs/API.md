@@ -6,83 +6,87 @@
 
 ## Calendar API ##
 
-### Request URL ###
+### Request ###
 
-https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json
+- METHOD : GET
+- URL : https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json
+```sh
+curl https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json
+```
 
 ### Responsed Data ###
 
-Array of Events
+รายการอีเว้นท์การจัดงานต่างๆ ในรูปแบบของอาเรย์
 
 #### Responsed parameter ####
 
-|Name|Description|type|Require|
+|ตัวแปร|รายละเอียด|ชนิดข้อมูล|Require|
 |---|---|---|--:|
-|id|ไอดีของอีเว้นท์|String|Require|
-|title|---|String|Require|
-|summary|---|String|Require|
-|description|---|String|Require|
-|start|---|[Date Object](#object-date)|Require|
-|end|---|[Date Object](#object-date)|Require|
-|time|---|_Array_\<[Time Object](#object-time)>||
-|location|---|[Location Object](#object-location)||
-|categories|---|_Array_\<String>|Require 1 items|
-|topics|---|_Array_\<String>||
-|links|---|_Array_\<[Link Object](#object-link)>||
-|resources|---|_Array_\<[Resource Object](#object-resource)>||
-|communityResources|---|_Array_\<[Resource Object](#object-resource)>||
-|declared|---|[Declared Object](#object-declared)||
+|id|ไอดีของงานอีเว้นท์|String|Require|
+|title|หัวข้อของงานอีเวนท์|String|Require|
+|summary|สรุปสาระสำคัญของงานอีเว้นท์|String|Require|
+|description|รายละเอียดของงานอีเว้น|String|Require|
+|start|วันที่เริ่มงานอีเว้นท์|[Date Object](#object-date)|Require|
+|end|วันที่สิ้นสุดงานอีเว้นท์|[Date Object](#object-date)|Require|
+|time|เวลาการจัดงานอีเว้นท์|_Array_\<[Time Object](#object-time)>||
+|location|สถานที่จัดงานอีเว้นท์|[Location Object](#object-location)||
+|categories|ประเภทของอีเว้นท์|_Array_\<String>|Require|
+|topics|หัวข้อที่เกี่ยวข้องกับงานอีเว้นท์|_Array_\<String>||
+|links|ลิงค์สำหรับงานอีเว้นท์|_Array_\<[Link Object](#object-link)>||
+|resources|แหล่งที่มาของงานอีเว้นท์|_Array_\<[Resource Object](#object-resource)>||
+|communityResources|ลิงค์กลุ่มของงานอีเว้นท์|_Array_\<[Resource Object](#object-resource)>||
+|declared|???|[Declared Object](#object-declared)||
 
 ##### Object: Date #####
 
-|Name|Description|type|Require|
+|ตัวแปร|รายละเอียด|ชนิดข้อมูล|Require|
 |---|---|---|--:|
-|year|ปีที่จัดอีเว้นท์|Integer|Require|
-|month|เดือนที่จัดอีเว้นท์|Integer|Require|
-|date|วันที่จัดอีเว้นท์|Integer|Require|
+|year|ปีที่จัดงานอีเว้นท์|Integer|Require|
+|month|เดือนที่จัดงานอีเว้นท์|Integer|Require|
+|date|วันที่จัดงานอีเว้นท์|Integer|Require|
 
 ##### Object: Time #####
 
-|Name|Description|type|Require|
+|ตัวแปร|รายละเอียด|ชนิดข้อมูล|Require|
 |---|---|---|--:|
-|from|---|Object {hour:int, monute:int}|Require|
-|to|---|Object {hour:int, monute:int}|Require|
-|after||Boolean||
-|agendar|Lecture/Tutorial Meetup|String||
+|from|เวลาเปิดงานอีเว้นท์|Object {hour:int, monute:int}|Require|
+|to|เวลาปิดงานอีเว้นท์|Object {hour:int, monute:int}|Require|
+|after|???|Boolean||
+|agendar|??? Lecture/Tutorial Meetup|String||
 
 ##### Object: Location #####
 
-|Name|Description|type|Require|
+|ตัวแปร|รายละเอียด|ชนิดข้อมูล|Require|
 |---|---|---|--:|
-|title||String|Require|
-|url||String|Require|
-|detail||String||
+|title|ชื่อสถานที่ที่สามารถค้นหาผ่าน Google Map|String|Require|
+|url|ลิงค์สถานที่|String|Require|
+|detail|รายละเอียดสถานที่จัดงาน เช่น ห้อง ชั้น|String||
 
 ##### Object: Link #####
 
-|Name|Description|type|Require|
+|ตัวแปร|รายละเอียด|ชนิดข้อมูล|Require|
 |---|---|---|--:|
-|title||String|Require|
-|detail||String||
-|type|website, rsvp, ticket|String|Require|
-|url||String|Require|
-|price||String|Require when type ticket|
+|title|ชื่อลิงค์|String|Require|
+|detail|รายละเอียดลิงค์|String||
+|type|ประเภทของลิงค์ เช่น website, rsvp, ticket|String|Require|
+|url|ลิงค์|String|Require|
+|price|ราคาบัตรของงานอีเว้นท์|String|Require when type ticket|
 
 ##### Object: Resource #####
 
-|Name|Description|type|Require|
+|ตัวแปร|รายละเอียด|ชนิดข้อมูล|Require|
 |---|---|---|--:|
-|title||String|Require|
-|type|video|String|Require|
-|url||String|Require|
+|title|ชื่อแหล่งที่มา|String|Require|
+|type|ประเภทของแหล่งที่มา เช่น video|String|Require|
+|url|ลิงค์|String|Require|
 
 ##### Object: Declared #####
 
-|Name|Description|type|Require|
+|ตัวแปร|รายละเอียด|ชนิดข้อมูล|Require|
 |---|---|---|--:|
-|filename||String|Require|
-|line||Integer|Require|
-|column||Integer|Require|
+|filename|ชื่อไฟล์อ้างอิง|String|Require|
+|line|บรรทัดที่เริ่มอ่านข้อมูล|Integer|Require|
+|column|คอลั่มที่เริ่มอ่านข้อมูล|Integer|Require|
 
 #### Example array object of events ####
 
@@ -161,62 +165,37 @@ Array of Events
       "line": 1,
       "column": 1
     }
-  },
-  {
-    "id": "jsconf-asia-2019",
-    "start": {
-      "year": 2019,
-      "month": 6,
-      "date": 14
-    },
-    "end": {
-      "year": 2019,
-      "month": 6,
-      "date": 16
-    },
-    "categories": [
-      "Conference"
-    ],
-    "topics": [
-      "JavaScript"
-    ],
-    "time": null,
-    "title": "JSConf.Asia 2019",
-    "location": {
-      "title": "Singapore",
-      "detail": "[LASALLE College of the Arts](https://www.google.fr/maps/place/LASALLE+College+of+the+Arts/@1.3026003,103.8514892,19.89z/data=!4m5!3m4!1s0x31da19bbe54abb45:0xed0ecef2d74379c!8m2!3d1.3029095!4d103.8515946);"
-    },
-    "summary": "งาน JavaScript ที่ใหญ่ที่สุดในเอเชียตะวันออกเฉียงใต้\nจะได้เจอคนจาก Microsoft, Mozilla, … ด้วย",
-    "description": "JSConf.Asia 2019 is a 3 day long celebration of the web technology and design. It is the sixth edition of Southeast Asia’s most influential community event from developers for developers with the aim to educate, inspire and entertain around open source and the web.",
-    "links": [
-      {
-        "type": "website",
-        "url": "https://2019.jsconf.asia/",
-        "title": "2019.jsconf.asia"
-      },
-      {
-        "type": "ticket",
-        "url": "https://events.pouchnation.com/event/jsconfasia2019",
-        "title": "Buy tickets",
-        "price": "790 SGD (2019 Jan)"
-      },
-      {
-        "type": "rsvp",
-        "url": "https://www.facebook.com/events/491088001393972/",
-        "title": "Facebook event"
-      }
-    ],
-    "resources": [
-      
-    ],
-    "communityResources": [
-      
-    ],
-    "declared": {
-      "filename": "data/2019-06/jsconf-asia-2019.md",
-      "line": 1,
-      "column": 1
-    }
   }
+  ,/// {Event Object}
 ]
+```
+
+#### Example MD ####
+```
+---
+id: ampconf-2019
+date: 2019-04-17 ~ 2019-04-18
+location:
+  title: Tokyo
+  detail: >-
+    [ROPPONGI ACADEMY HILLS](https://goo.gl/maps/beyjcpb2wNm);
+
+categories:
+  - Conference
+topics:
+  - AMP
+links:
+  - type: website
+    url: 'https://www.ampproject.org/amp-conf/'
+    title: 2019.jsconf.asia
+  - type: ticket
+    url: 'https://events.withgoogle.com/amp-conf-2019/registrations/new/'
+    title: Buy tickets
+    price: FREE
+---
+# AMP Conf 2019
+
+> Building the future web, together.
+
+The AMP team and community is bringing its yearly gathering to Tokyo for two days full of talks by developers for developers, all crafted to help you create a best-in-class user experience. Whether you're interested in rich animations, dynamic content, DevOps or monetization, we got you covered. We can't wait to meet you.
 ```

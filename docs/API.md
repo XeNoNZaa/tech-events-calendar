@@ -35,7 +35,7 @@ curl https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json
 |links|ลิงค์สำหรับงานอีเว้นท์|_Array_\<[Link Object](#object-link)>||
 |resources|แหล่งที่มาของงานอีเว้นท์|_Array_\<[Resource Object](#object-resource)>||
 |communityResources|ลิงค์กลุ่มของงานอีเว้นท์|_Array_\<[Resource Object](#object-resource)>||
-|declared|???|[Declared Object](#object-declared)||
+|declared|อ้างอิงแหล่งเข้าถึงข้อมูล|[Declared Object](#object-declared)||
 
 ##### Object: Date #####
 

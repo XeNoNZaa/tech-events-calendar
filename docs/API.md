@@ -23,21 +23,66 @@ Array of Events
 |summary|---|String|Require|
 |description|---|String|Require|
 |start|---|[Date Object](#object-date)|Require|
-|end|---|Date Object|Require|
-|time|---|_Array_\<Time Object>||
-|location|---|Location Object||
-|categories|---|_Array_\<String>||
+|end|---|[Date Object](#object-date)|Require|
+|time|---|_Array_\<[Time Object](#object-time)>||
+|location|---|[Location Object](#object-location)||
+|categories|---|_Array_\<String>|Require 1 items|
 |topics|---|_Array_\<String>||
-|links|---|_Array_\<Link Object>||
-|resources|---|_Array_\<Resource Object>||
-|communityResources|---|_Array_\<Resource Object>||
-|declared|---|Declared Object||
+|links|---|_Array_\<[Link Object](#object-link)>||
+|resources|---|_Array_\<[Resource Object](#object-resource)>||
+|communityResources|---|_Array_\<[Resource Object](#object-resource)>||
+|declared|---|[Declared Object](#object-declared)||
 
 ##### Object: Date #####
 
 |Name|Description|type|Require|
 |---|---|---|--:|
-|id|ไอดีของอีเว้นท์|String|Require|
+|year|ปีที่จัดอีเว้นท์|Integer|Require|
+|month|เดือนที่จัดอีเว้นท์|Integer|Require|
+|date|วันที่จัดอีเว้นท์|Integer|Require|
+
+##### Object: Time #####
+
+|Name|Description|type|Require|
+|---|---|---|--:|
+|from|---|Object {hour:int, monute:int}|Require|
+|to|---|Object {hour:int, monute:int}|Require|
+|after||Boolean||
+|agendar|Lecture/Tutorial Meetup|String||
+
+##### Object: Location #####
+
+|Name|Description|type|Require|
+|---|---|---|--:|
+|title||String|Require|
+|url||String|Require|
+|detail||String||
+
+##### Object: Link #####
+
+|Name|Description|type|Require|
+|---|---|---|--:|
+|title||String|Require|
+|detail||String||
+|type|website, rsvp, ticket|String|Require|
+|url||String|Require|
+|price||String|Require when type ticket|
+
+##### Object: Resource #####
+
+|Name|Description|type|Require|
+|---|---|---|--:|
+|title||String|Require|
+|type|video|String|Require|
+|url||String|Require|
+
+##### Object: Declared #####
+
+|Name|Description|type|Require|
+|---|---|---|--:|
+|filename||String|Require|
+|line||Integer|Require|
+|column||Integer|Require|
 
 #### Example array object of events ####
 
